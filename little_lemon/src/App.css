@@ -1,9 +1,72 @@
 .nav-item{
-    padding-left: 180px;
     font-weight: bold;
     font-size: large;
 }
 
 .navbar-brand{
     height: 100px;
+    padding-left: 80px;
 }
+
+.reservation-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px; /* Gap between grid items */
+    background-color: rgb(73, 100, 87);
+  }
+.reservation-container > div{
+    padding: 10px;
+    background-color: rgb(73, 100, 87);
+    border-radius: 10px;
+}
+.restaurant-info {
+    grid-column: 1;
+  }
+
+.restaurant-image {
+    grid-column: 2;
+  }
+
+.restaurant-image img {
+    max-width: 40%; /* Ensure image does not exceed container width */
+    margin: 0 auto;
+    display: block;
+  }
+
+.btn{
+    display: block;
+    margin-top: 10px;
+}
+
+.navbar{
+  position: fixed;
+  overflow: hidden;
+}
+
+.container{
+  margin-top: 7%;
+}
+
+.card{
+    width: 18 rem;
+    height: 100px;
+}
+
+.menu-container {
+  padding: 20px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 140px;
+}
+
+.menu-item {
+  text-align: center;
+}
+
+.order{
+  text-align: right;
+}
+

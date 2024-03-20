@@ -4,11 +4,22 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Nav from './components/Nav';
+import Reservations from './components/Reservations';
+import Menu from './components/Menu';
 function App() {
   return(
-    <div className='container'>
-      <Nav/>
-    </div>
+  <>
+    <Nav/>
+    <main className='container'>
+      <div className='row'>
+        <Reservations/>
+      </div>
+      <hr/>
+      <div className='row'>
+        <Menu/>
+      </div>
+    </main>
+  </>
   )
 }
 
