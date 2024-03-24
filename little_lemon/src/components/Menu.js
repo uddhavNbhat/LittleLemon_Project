@@ -13,25 +13,28 @@ function Menu(){
     const [menuItems, setMenuItems] = useState([
         {
           id: 1,
-          name: "Special 1",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          name: "Greek Salad",
+          description: "The famous greek salad of crispy lettuce, peppers, olives, and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
           image: img3,
+          price: "$ 12.99",
         },
         {
           id: 2,
-          name: "Special 2",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          name: "Bruschetta",
+          description: "Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive.",
           image: img4,
+          price: "$ 5.99",
         },
         {
           id: 3,
-          name: "Special 3",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          name: "Lemon Dessert",
+          description: "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
           image: img5,
+          price: "$ 5.00",
         }
       ]);
     return(
-      <>
+      <div id='menu'>
         <div className='row'>
           <div className='col-6'>
             <h1>Specials</h1>
@@ -45,18 +48,18 @@ function Menu(){
             {menuItems.map(item => (
               <div key={item.id} className="menu-item">
                 <div class="card" style={{width: '20rem'}}>
-                  <img class="card-img-top" src={item.image} alt="Card cap"/>
+                  <img class="card-img-top" src={item.image} alt="Card cap" style={{height:'15rem'}}/>
                   <div class="card-body">
                     <h5 class="card-title">{item.name}</h5>
                     <p class="card-text">{item.description}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="#" class="btn btn-primary" style={{fontFamily:'cursive'}}>{item.price}</a>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </>
+      </div>
     );
 }
 

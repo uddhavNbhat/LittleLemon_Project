@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Nav from './components/Nav';
 import Reservations from './components/Reservations';
 import Menu from './components/Menu';
+import Testimonials from './components/Testimonials';
 function App() {
   return(
   <>
@@ -17,6 +18,10 @@ function App() {
       <hr/>
       <div className='row'>
         <Menu/>
+      </div>
+      <hr/>
+      <div className='row'>
+        <Testimonials/>
       </div>
     </main>
   </>

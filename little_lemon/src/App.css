@@ -11,7 +11,7 @@
 .reservation-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 10px; /* Gap between grid items */
+    grid-gap: 10px;
     background-color: rgb(73, 100, 87);
   }
 .reservation-container > div{
@@ -28,7 +28,7 @@
   }
 
 .restaurant-image img {
-    max-width: 40%; /* Ensure image does not exceed container width */
+    max-width: 40%;
     margin: 0 auto;
     display: block;
   }
@@ -68,5 +68,122 @@
 
 .order{
   text-align: right;
+}
+
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 17%;
+  }
+
+  .navbar-brand {
+    padding-left: 20px;
+  }
+
+  .reservation-container {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-info, .restaurant-image {
+    grid-column: auto;
+    text-align: center;
+  }
+
+  .restaurant-image img {
+    max-width: 80%;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-left: 100px;
+  }
+
+  .order {
+    text-align: right;
+
+  }
+}
+
+.comment{
+  padding-bottom: 30px;
+}
+
+.opinion{
+  text-align: center;
+}
+
+.Rate > h4{
+  padding-bottom: 25px;
+}
+
+.Rate{
+  margin-top: 5%;
+  text-align: center;
+}
+
+.rate1{
+  grid-area: one;
+  text-align: left;
+
+}
+
+.rate2{
+  grid-area: two;
+}
+
+.rate3{
+  grid-area: three;
+}
+
+.ratings{
+  display: grid;
+  grid-template-areas:
+    'one one two two three three'
+    'one one two two three three'
+    'one one two two three three';
+  gap: 10px;
+  background-color: rgb(244,206,20);
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.ratings > div{
+  background-color: aliceblue;
+}
+
+.rate1, .rate2, .rate3 {
+  padding-top: 50px;
+}
+
+.logo-placeholder {
+  height: 50px;
+}
+
+.text-center {
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+}
+
+.star-ratings {
+  display: flex;
+  justify-content: center;
+}
+
+.rating {
+  font-size: 24px;
+}
+
+.star {
+  color: gold;
+}
+
+.test{
+  background-color: rgb(73, 100, 87);
 }
 
