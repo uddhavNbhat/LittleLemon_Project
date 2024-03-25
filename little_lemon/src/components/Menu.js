@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import img2 from './restauranfood.jpg';
-import img3 from './greeksalad.jpg';
-import img4 from './bruschetta.jpg';
-import img5 from './lemon dessert.jpg';
+import img2 from './images/restauranfood.jpg';
+import img3 from './images/greeksalad.jpg';
+import img4 from './images/bruschetta.jpg';
+import img5 from './images/lemon dessert.jpg';
 
 
 function Menu(){
@@ -47,12 +47,12 @@ function Menu(){
           <div className="menu-grid">
             {menuItems.map(item => (
               <div key={item.id} className="menu-item">
-                <div class="card" style={{width: '20rem'}}>
-                  <img class="card-img-top" src={item.image} alt="Card cap" style={{height:'15rem'}}/>
-                  <div class="card-body">
-                    <h5 class="card-title">{item.name}</h5>
-                    <p class="card-text">{item.description}</p>
-                    <a href="#" class="btn btn-primary" style={{fontFamily:'cursive'}}>{item.price}</a>
+                <div className="card" style={{width: '20rem'}}>
+                  <img className="card-img-top" src={item.image} alt="Card cap" style={{height:'15rem'}}/>
+                  <div className="card-body">
+                    <h5 className="card-title">{item.name}</h5>
+                    <p className="card-text">{item.description}</p>
+                    <a href="#" className="btn btn-primary" style={{fontFamily:'cursive'}}>{item.price}</a>
                   </div>
                 </div>
               </div>

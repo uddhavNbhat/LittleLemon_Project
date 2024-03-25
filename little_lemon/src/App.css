@@ -187,3 +187,37 @@
   background-color: rgb(73, 100, 87);
 }
 
+.about-container {
+  padding-top: 50px;
+}
+
+.about-content {
+  padding-right: 20px;
+}
+
+.about-images {
+  grid-area: 1 / 2 / 2 / 3;
+  position: relative;
+  margin-bottom: 15%;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img1,
+.img2 {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+.img2 {
+  position: absolute;
+  top: 90%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+

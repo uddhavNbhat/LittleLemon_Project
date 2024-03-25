@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import img2 from './restauranfood.jpg';
+import img2 from './images/restauranfood.jpg';
 
 
 function Testimonials(){
@@ -27,60 +27,60 @@ function Testimonials(){
                 <div className='col-12'>
                     <div className='ratings'>
                         <div className='rate1'>
-                            <div class="logo-placeholder">
+                            <div className="logo-placeholder">
                             </div>
-                            <div class="text-center">
+                            <div className="text-center">
                                 <h3>Review 1</h3>
                                 <p>
                                     Lovely staff food and ambience thank you! A well thought out menu - simple and delicious, flavours speak for themselves, LOVED the pork belly. Service was brilliant both nights. All great value also!
                                 </p>
-                                <div class="star-ratings">
-                                    <div class="rating">
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
+                                <div className="star-ratings">
+                                    <div className="rating">
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className='rate2'>
-                            <div class="logo-placeholder">
+                            <div className="logo-placeholder">
 
                             </div>
-                            <div class="text-center">
+                            <div className="text-center">
                                 <h3>Review 2</h3>
                                 <p>
                                     Lovely staff food and ambience thank you! A well thought out menu - simple and delicious, flavours speak for themselves, LOVED the pork belly. Service was brilliant both nights. All great value also!
                                 </p>
-                                <div class="star-ratings">
-                                    <div class="rating">
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
+                                <div className="star-ratings">
+                                    <div className="rating">
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
                         <div className='rate3'>
-                            <div class="logo-placeholder">
+                            <div className="logo-placeholder">
                             </div>
-                            <div class="text-center">
+                            <div className="text-center">
                                 <h3>Review 3</h3>
                                 <p>
                                     Lovely staff food and ambience thank you! A well thought out menu - simple and delicious, flavours speak for themselves, LOVED the pork belly. Service was brilliant both nights. All great value also!
                                 </p>
-                                <div class="star-ratings">
-                                    <div class="rating">
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
-                                        <span class="star">&#9733;</span>
+                                <div className="star-ratings">
+                                    <div className="rating">
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
+                                        <span className="star">&#9733;</span>
                                     </div>
                                 </div>
                             </div>
