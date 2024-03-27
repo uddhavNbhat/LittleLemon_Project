@@ -6,6 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate } from 'react-router-dom';
 import { FaHome} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { submitAPI } from './utils/temp';
 function Booking(){
     const navigate = useNavigate();
     const [formdata,setFormdata] = useState({
@@ -42,7 +43,8 @@ function Booking(){
     const handleSubmit = (event) =>{
         event.preventDefault();
         console.log(formdata);
-        navigate('/success');
+        if(submitAPI(formdata))
+            navigate('/success');
     }
 
     return(
