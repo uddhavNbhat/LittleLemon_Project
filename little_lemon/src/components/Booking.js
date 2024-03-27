@@ -4,7 +4,7 @@ import { useState,useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate } from 'react-router-dom';
-import { FaHome, FaThLarge } from 'react-icons/fa';
+import { FaHome} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 function Booking(){
     const navigate = useNavigate();
@@ -41,13 +41,14 @@ function Booking(){
 
     const handleSubmit = (event) =>{
         event.preventDefault();
+        console.log(formdata);
         navigate('/success');
     }
 
     return(
         <>
             <div className='home'>
-                <Link to='/'><FaHome className='fa-solid fa-5x'/></Link>
+                <Link to='/'><FaHome style={{fontSize:'3em',margin:'20px'}}/></Link>
             </div>
             <div className="container">
                 <div className="row">
