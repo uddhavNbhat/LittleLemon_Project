@@ -221,3 +221,56 @@
   transform: translate(-50%, -50%);
 }
 
+
+div>h1 {
+  color: rgb(244, 206, 20);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div>h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.btn-primary {
+  background-color: rgb(244, 206, 20) !important;
+}
+
+.form-group label {
+  font-family: cursive;
+}
+
+.form-select,
+.form-range,
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-select:focus,
+.form-range:focus,
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form-select option {
+  background-color: rgb(73, 100, 87);
+  color: white;
+}
+
+
+button[type="submit"] {
+  margin-top: 15px;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-family: cursive;
+  margin-bottom: 5px;
+}
+
