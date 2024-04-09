@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { FaHome} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { submitAPI } from './utils/temp';
+import  axios  from 'axios';
+
 function Booking(){
     const navigate = useNavigate();
     const [formdata,setFormdata] = useState({
@@ -43,6 +45,12 @@ function Booking(){
     const handleSubmit = (event) =>{
         event.preventDefault();
         console.log(formdata);
+        const passdata = {
+            name : formdata.name,
+            date : formdata.date,
+            guests : formdata.guests
+        }
+        axios.post('http://localhost:8081/booking/addbooking',passdata);
         if(submitAPI(formdata))
             navigate('/success');
     }

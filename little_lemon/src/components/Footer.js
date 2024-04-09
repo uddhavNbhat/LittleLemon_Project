@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { Link } from "react-scroll";
 import img6 from './images/restaurant.jpg';
+
 function Footer(){
     return(
         <footer className="container-fluid bg-dark text-light py-5">

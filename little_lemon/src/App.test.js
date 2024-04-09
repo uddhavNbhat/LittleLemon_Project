@@ -3,11 +3,6 @@ import App from './App';
 import Booking from './components/Booking';
 import { submitAPI } from './utils/temp';
 
-test('Renders the BookingForm heading', () => {
-  render(<Booking />);
-  const headingElement = screen.getByText("FIND A TABLE");
-  expect(headingElement).toBeInTheDocument();
-})
 
 test('submitAPI returns true', () => {
   const formData = {

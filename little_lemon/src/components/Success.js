@@ -2,6 +2,8 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
+import { FaCheckCircle } from "react-icons/fa";
+
 function Success({name}){
     const [reservedet,setReservedet] = useState('');
 
@@ -14,7 +16,8 @@ function Success({name}){
         <div className="container">
             <div className="row">
                 <div className="col-12">
-                    <h1 style={{textAlign:'center'}}>We Hope to see you</h1>
+                    <h1 style={{textAlign:'center'}}><span style={{padding:'10px'}}><FaCheckCircle/></span>Booking Successful</h1>
+                    <h1 style={{textAlign:'center'}}>We Hope to see you!</h1>
                     <h2 style={{textAlign:'center'}}>Booking Details</h2>
                 </div>
             </div>
