@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from 'react';
 import Booking from './Booking';
+import Availablebooking from './Availablebooking';
 function Nav() {
     return (
         <>
@@ -15,13 +16,22 @@ function Nav() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className='collapse navbar-collapse navbar-nav-scroll' id="navbarScroll">
-                        <ul className='navbar-nav justify-content-center w-50 d-flex'>
+                        <ul className='navbar-nav justify-content-center w-100 d-flex'>
                             <li className='nav-item p-2'><RouterLink to="/" className="nav-link" href='#'>Home</RouterLink></li>
                             <li className='nav-item p-2'><Link to="about" smooth={true} spy={true} offset={50} duration={100} className="nav-link" href='#'>About</Link></li>
                             <li className='nav-item p-2'><Link to="menu" smooth={true} spy={true} offset={50} duration={100} className="nav-link" href='#'>Menu</Link></li>
                             <li className='nav-item p-2'><Link to="test" smooth={true} spy={true} offset={50} duration={100} className="nav-link" href='#'>Testimonials</Link></li>
                             <li className='nav-item p-2'>
                                 <RouterLink to="/booking" className="nav-link">Reservations</RouterLink>
+                            </li>
+                            <li className='nav-item p-2'>
+                                <RouterLink to="/availablebookings" className='nav-link'>Current Booking</RouterLink>
+                            </li>
+                            <li className='nav-item p-2'>
+                                <RouterLink to="/signup" className='nav-link'>Sign Up</RouterLink>
+                            </li>
+                            <li className='nav-item p-2'>
+                            <RouterLink to="/signin" className='nav-link'>Sign In</RouterLink>
                             </li>
                         </ul>
                     </div>

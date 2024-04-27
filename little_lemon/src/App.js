@@ -7,6 +7,9 @@ import Booking from './components/Booking';
 import Success from './components/Success';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Availablebooking from './components/Availablebooking';
+import Signup from './components/Signup';
+import Signin from './components/Signin';
 
 function App() {
   const [data, setData] = useState('');
@@ -25,6 +28,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/booking" element={<Booking/>} />
           <Route path="/success" element={<Success/>}/>
+          <Route path="/availablebookings" element = {<Availablebooking/>}/>
+          <Route path="/signup" element = {<Signup/>}/>
+          <Route path="/signin" element = {<Signin/>}/>
         </Routes>
     </Router>
   );

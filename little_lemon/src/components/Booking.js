@@ -10,11 +10,13 @@ import { submitAPI } from './utils/temp';
 import  axios  from 'axios';
 
 function Booking(){
+    axios.defaults.withCredentials = true;
     const navigate = useNavigate();
     const [formdata,setFormdata] = useState({
         name : '',
         date : '',
         guests:'5',
+        timings: '',
     });
 
     useEffect(() => {
@@ -37,6 +39,25 @@ function Booking(){
         setFormdata({...formdata,guests:guestNo.toString()});
     }
 
+    const timings = [
+        {id:1, label: "17:00 PM", value:"17:00PM"},
+        {id:2, label: "17:30 PM", value:"17:30PM"},
+        {id:3, label: "18:00 PM", value:"18:00PM"},
+        {id:4, label: "18:30 PM", value:"18:30PM"},
+        {id:5, label: "19:00 PM", value:"19:00PM"},
+        {id:6, label: "19:30 PM", value:"19:30PM"},
+        {id:7, label: "20:00 PM", value:"20:00PM"},
+        {id:8, label: "20:30 PM", value:"20:30PM"}
+    ];
+
+    const[dropdownitem,setDropdownitem] = useState(timings[0].value);
+
+    const onChangeTime = (event) =>{
+        const time = event.target.value
+        setDropdownitem(time);
+        setFormdata({...formdata,timings:time.toString()});
+    }
+
     const onChangeName = (event) =>{
         const {name,value} = event.target;
         setFormdata({...formdata,[name]:value});
@@ -48,11 +69,18 @@ function Booking(){
         const passdata = {
             name : formdata.name,
             date : formdata.date,
-            guests : formdata.guests
+            guests : formdata.guests,
+            timings: formdata.timings,
         }
-        axios.post('http://localhost:8081/booking/addbooking',passdata);
+        axios.post('http://localhost:8081/booking/addbooking',passdata
+        ).then(response => {
+            navigate('/success');
+        }).catch(error => {
+            console.error('Booking error:', error);
+            alert('Error booking: ' + error.response.data.message);;
         if(submitAPI(formdata))
             navigate('/success');
+        })
     }
 
     return(
@@ -86,11 +114,12 @@ function Booking(){
                         </div>
                         <div className="form-group">
                             <label style={{fontFamily:'cursive'}}>Timings: </label>
-                            <select className="form-select" aria-label="Default select example" required>
-                                <option selected>17:00 PM</option>
-                                <option value="1">18:00 PM</option>
-                                <option value="2">19:00 PM</option>
-                                <option value="3">20:00 PM</option>
+                            <select value={dropdownitem} onChange={onChangeTime} required>
+                                {timings.map(timings => (
+                                    <option key={timings.id} value={timings.value}>
+                                        {timings.label}
+                                    </option>
+                                ))}
                             </select>
                         </div>
                         <div className="form-group">

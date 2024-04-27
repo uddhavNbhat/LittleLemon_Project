@@ -5,8 +5,13 @@ const bookingSchema = new mongoose.Schema({
     date : String,
     guests : {
         type: Number,
-        max: 10
-    }
+        max: 20
+    },
+    timings : String,
 })
 
 module.exports = mongoose.model("data_schema",bookingSchema);
+
+
+
+

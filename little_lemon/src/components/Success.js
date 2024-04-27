@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 
-function Success({name}){
+function Success(){
     const [reservedet,setReservedet] = useState('');
 
     useEffect(() => {
@@ -26,6 +26,7 @@ function Success({name}){
                     <h3 style={{textAlign:'center'}}>Name: {reservedet.name}</h3>
                     <h3 style={{textAlign:'center'}}>Date: {reservedet.date}</h3>
                     <h3 style={{textAlign:'center'}}>Guests: {reservedet.guests}</h3>
+                    <h3 style={{textAlign:'center'}}>Time: {reservedet.timings}</h3>
                     <Link to="/"><button className="btn btn-primary" style={{marginLeft:'47%'}}>Home</button></Link>
                 </div>
             </div>
