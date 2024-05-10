@@ -13,11 +13,15 @@ userRoute.route('/signin').post(async (req, res, next) => {
         }
         const validPassword = await bcryptjs.compare(password, validUser.password);
         if (!validPassword) {
-            return res.status(401).json({ message: 'Invalid password' });
+            return res.status(404).json({ message: 'Invalid password' });
         }
 
-        const token = jwt.sign({ id: validUser._id }, "littul_lemun", { expiresIn: '7d' });
-        const { password: hashedPassword, ...requiredinfo } = validUser.toObject();
+        if(validPassword){
+            const token = jwt.sign({ id: validUser._id }, "littul_lemun", { expiresIn: '7d' });
+            console.log("token is: " + token)
+            const { password: hashedPassword, ...requiredinfo } = validUser.toObject();
+            return res.status(200).json({ message: 'Login successful' });
+        }
 
 
     } catch (error) {

@@ -22,7 +22,6 @@ mongoose.connect("mongodb://localhost:27017/formdb").then(()=>{
 mongoose.Promise = global.Promise;
 app.use(bodyParser.json());
 
-
 const userRoutes = require('./routes/auth_user');
 
 app.use('/auth_user',userRoutes);

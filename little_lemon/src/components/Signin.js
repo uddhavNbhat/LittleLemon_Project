@@ -31,6 +31,7 @@ function Signin(){
         console.log(signdata);
         try {
             const response = await axios.post('http://localhost:8081/sign_user/signin', signdata);
+            console.log(response.status)
             if(response.status === 200){
                 console.log('Signin successful');
                 setSigninSuccess(true);

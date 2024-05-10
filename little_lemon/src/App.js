@@ -12,18 +12,11 @@ import Signup from './components/Signup';
 import Signin from './components/Signin';
 
 function App() {
-  const [data, setData] = useState('');
 
-  useEffect(() => {
-    fetch('http://localhost:8081/api')
-    .then(res => res.json())
-    .then(data => setData(data.message))
-    .catch(err => console.log(err))
-  },[])
+
 
   return (
     <Router>
-      {console.log({data})}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/booking" element={<Booking/>} />
