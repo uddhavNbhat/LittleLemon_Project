@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { useState,useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import  axios  from 'axios';
+import axiosInstance from './utils/axiosInstance';
 
 
 function Signin(){
@@ -30,10 +31,11 @@ function Signin(){
         setErrorMessage('');
         console.log(signdata);
         try {
-            const response = await axios.post('http://localhost:8081/sign_user/signin', signdata);
+            const response = await axiosInstance.post('http://localhost:8081/sign_user/signin', signdata);
             console.log(response.status)
             if(response.status === 200){
                 console.log('Signin successful');
+                localStorage.setItem('token', response.data.token);
                 setSigninSuccess(true);
                 navigate('/');
             }

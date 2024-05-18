@@ -34,6 +34,10 @@ const bookingRoutes = require('./routes/booking');
 
 app.use('/booking',bookingRoutes);
 
+const userStateRoutes = require('./routes/userRoute');
+
+app.use('/auth',userStateRoutes);
+
 app.listen(8081,()=>{
     console.log("Listening");
 })

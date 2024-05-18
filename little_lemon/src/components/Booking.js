@@ -8,6 +8,7 @@ import { FaHome} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { submitAPI } from './utils/temp';
 import  axios  from 'axios';
+import axiosInstance from './utils/axiosInstance';
 
 function Booking(){
     axios.defaults.withCredentials = true;
@@ -72,12 +73,12 @@ function Booking(){
             guests : formdata.guests,
             timings: formdata.timings,
         }
-        axios.post('http://localhost:8081/booking/addbooking',passdata
+        axiosInstance.post('http://localhost:8081/booking/addbooking',passdata
         ).then(response => {
             navigate('/success');
         }).catch(error => {
             console.error('Booking error:', error);
-            alert('Error booking: ' + error.response.data.message);;
+            alert('Error booking: ' + error.response.data.message);
         if(submitAPI(formdata))
             navigate('/success');
         })
