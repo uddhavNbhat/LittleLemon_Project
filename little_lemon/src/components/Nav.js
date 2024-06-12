@@ -26,7 +26,7 @@ function Nav() {
     }, []);
 
     const handleSignOut = () => {
-        localStorage.removeItem('token');
+        sessionStorage.removeItem('token');
         setIsLoggedIn(false);
         setUsername('');
         navigate('/');
@@ -50,10 +50,10 @@ function Nav() {
                             <li className='nav-item p-2'><RouterLink to="/availablebookings" className='nav-link'>Current Booking</RouterLink></li>
                             {isLoggedIn ? (
                                 <>
-                                    <li className='nav-item p-2' style={{marginLeft:'100px'}}>
+                                    <li className='nav-item'>
                                         <button onClick={handleSignOut} className='btn btn-link nav-link'>Sign Out</button>
                                     </li>
-                                    <li className='nav-item p-2'>
+                                    <li className='nav-item p-2' style={{marginLeft: '400px'}}>
                                         <span className='nav-link'>Welcome, {username}</span>
                                     </li>
                                 </>

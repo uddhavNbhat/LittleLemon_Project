@@ -18,6 +18,12 @@ userRoute.route('/signin').post(async (req, res, next) => {
 
         if (validPassword) {
             const token = jwt.sign({ id: validUser._id }, "littul_lemun", { expiresIn: '7d' });
+            const session = {
+                token,
+                expiresAt: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+            };
+            validUser.sessions.push(session);
+            await validUser.save();
             console.log("token is: " + token);
             const { password: hashedPassword, ...requiredinfo } = validUser.toObject();
             return res.status(200).json({ message: 'Login successful', token });

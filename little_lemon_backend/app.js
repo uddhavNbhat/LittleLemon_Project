@@ -10,11 +10,22 @@ const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 
 
-app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials: true,
-}));
+const allowedOrigins = [
+    'http://localhost:3000',
+    'http://192.168.1.73:3000'
+  ];
 
+  app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        const msg = 'The CORS policy for this site does not allow access from the specified origin.';
+        return callback(new Error(msg), false);
+      }
+      return callback(null, true);
+    },
+    credentials: true
+  }));
 mongoose.connect("mongodb://localhost:27017/formdb").then(()=>{
     console.log("Connection established");
 })

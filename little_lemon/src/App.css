@@ -274,3 +274,6 @@ button[type="submit"] {
   margin-bottom: 5px;
 }
 
+.nav-item {
+  padding: 2px 10px;
+}
